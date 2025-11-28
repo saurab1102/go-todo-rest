@@ -1,12 +1,12 @@
 package http
 
 import (
-	"encoding/json"
+	//"encoding/json"
 	"net/http"
 	"strconv"
 	"strings"
 
-	"example.con/todo-rest/internal/todo"
+	"example.com/todo-rest/internal/todo"
 )
 
 type Handler struct {
@@ -47,3 +47,7 @@ func (h *Handler) ServeHTTP(w http.ResponseWriter, r *http.Request){
 }
 
 
+func (h *Handler) list(w http.ResponseWriter, r *http.Request){}
+func (h *Handler) create(w http.ResponseWriter, r *http.Request){}
+func (h *Handler) delete(id int){}
+func (h *Handler) done(id int){}
